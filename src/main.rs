@@ -1,4 +1,4 @@
-mod ast;
+mod syntaxtree;
 mod lexer;
 mod token;
 
@@ -32,7 +32,7 @@ fn main() {
     };
 
     let mut lexer = Lexer::new(&source);
-    let tokens = lexer.tokenize_all();
+    let tokens = lexer.get_all_tokens();
 
     for token in tokens {
         println!("{:?} => {:?}", token.kind, token.lexeme);
