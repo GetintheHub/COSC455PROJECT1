@@ -12,9 +12,6 @@ pub enum Node {
     Link(String),
     Newline,
     Text(String),
-    VarDef {
-        name: String,
-        value: String,
-    },
+    VarDef { name: String, value: String },
     VarUse(String),
 }

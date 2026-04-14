@@ -1,4 +1,4 @@
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TokenKind {
     Hai,
     Kbye,
@@ -34,6 +34,11 @@ pub struct Token {
 
 impl Token {
     pub fn new(kind: TokenKind, lexeme: String, line: usize, col: usize) -> Self {
-        Token { kind, lexeme, line, col }
+        Self {
+            kind,
+            lexeme,
+            line,
+            col,
+        }
     }
 }
